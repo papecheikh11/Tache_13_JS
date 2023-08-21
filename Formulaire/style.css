@@ -62,7 +62,7 @@ body{
     width: 50%;
     z-index: 2;
 }
-form{
+.form{
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -117,6 +117,7 @@ button:active{
     border-radius: 50%;
     background-color: #adf0d1;
     border: 1px solid rgba(0, 32, 63, .45);
+    color: rgba(1, 10, 19, 0.767);
 }
 h1{
     margin: 0;
