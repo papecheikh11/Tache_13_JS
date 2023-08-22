@@ -4,16 +4,17 @@ const container = document.getElementById("container");
 const loginButton = document.getElementById("login");
 const signUpButton = document.getElementById("signUp");
 const motDePasse = document.getElementById("motDePasse");
-const mail = document.getElementById("email");
 const motDePasseIns = document.getElementById("motDePasseIns");
+let mail = document.querySelector("#email");
 
-// let inscription = document.querySelector("#creerCompte");
+const btnClick1 = document.querySelector("#btnClick1");
 
 let msg = document.getElementById("msg");
 let msgins = document.getElementById("msgins");
 
 //boutton pour activer les page inscriptions et connexion
-signUpButton.addEventListener("click", () => {
+signUpButton.addEventListener("click", (e) => {
+  e.preventDefault();
   container.classList.add("panel-active");
 });
 
@@ -23,13 +24,19 @@ loginButton.addEventListener("click", () => {
 
 //Pour acceder a la page index
 
-function seConnecter() {
-  if (!mail.value !== "") {
-    window.location.href = "accueil.html";
+btnClick1.addEventListener("click", (e) => {
+  const emailRegExp = /^[^@]+@[^\.]+\..+$/;
+  e.preventDefault();
+  mailValue = mail.value;
+  mdp = motDePasse.value;
+  if (mailValue == "" || emailRegExp.test(mailValue) == false) {
+    alert("Enter un email valide");
+  } else if (mdp.length < 6) {
+    alert("Votre mot de passe n'est pas valide");
   } else {
-    console.log("Hello");
+    window.location.href = "accueil.html";
   }
-}
+});
 
 //Gestion de l'entrée des mots de passe
 
