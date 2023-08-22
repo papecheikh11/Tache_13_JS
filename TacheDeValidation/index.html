@@ -1,15 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-</head>
-<body>
-    <h1>Bienvenu sur ma page web</h1>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 
+    <title>Formulaire JavaScript</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <div class="form">
+          <h1>Creer un compte</h1>
+          <div class="social-container">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>Utiliser un compte gmail</span>
+          <input type="text" placeholder="Enter votre nom" id="nom">
+          <input type="email" placeholder="Enter votre mail">
+          <input type="password" placeholder="Mot de passe" id="motDePasseIns">
+          <p id="msgins"></p>
 
-    <script src="main.js"></script>
-</body>
+          <button id="creerCompte" onclick="inscription()">Creer le compte</button>
+        </div>
+      </div>
+      <div class="form-container login-container">
+        <div class="form">
+          <h1>Se connecter</h1>
+          <div class="social-container">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>Je me connecte</span>
+          <input type="email" placeholder="Enter votre mail" id="email">
+          <input type="password" placeholder="Mot de passe" id="motDePasse">
+          <p id="msg"></p>
+          <button id="btnClick1" type="submit" >Se connecter</button>
+        </div>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <button class="ghost" id="login">Se connecter</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <button class="ghost" id="signUp">Creer un compte</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+   <script src="script.js"></script>
+  </body>
 </html>
