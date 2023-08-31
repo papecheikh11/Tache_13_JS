@@ -6,6 +6,7 @@ const signUpButton = document.getElementById("signUp");
 const motDePasse = document.getElementById("motDePasse");
 const motDePasseIns = document.getElementById("motDePasseIns");
 let mail = document.querySelector("#email");
+let mymail = document.querySelector("#mymail");
 const btnClick1 = document.querySelector("#btnClick1");
 
 let msg = document.getElementById("msg");
@@ -71,7 +72,7 @@ motDePasseIns.addEventListener("input", () => {
 
 function inscription() {
   localStorage.setItem("nom", document.querySelector("#nom").value);
-  localStorage.setItem("email", document.querySelector("#email").value);
+  localStorage.setItem("email", document.querySelector("#mymail").value);
   localStorage.setItem(
     "motDePasseIns",
     document.querySelector("#motDePasseIns").value
