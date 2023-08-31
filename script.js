@@ -6,7 +6,6 @@ const signUpButton = document.getElementById("signUp");
 const motDePasse = document.getElementById("motDePasse");
 const motDePasseIns = document.getElementById("motDePasseIns");
 let mail = document.querySelector("#email");
-
 const btnClick1 = document.querySelector("#btnClick1");
 
 let msg = document.getElementById("msg");
@@ -31,7 +30,7 @@ btnClick1.addEventListener("click", (e) => {
   mdp = motDePasse.value;
   if (mailValue == "" || emailRegExp.test(mailValue) == false) {
     alert("Enter un email valide");
-  } else if (mdp.length < 6) {
+  } else if (mdp.length < 7) {
     alert("Votre mot de passe n'est pas valide");
   } else {
     window.location.href = "accueil.html";
@@ -77,4 +76,8 @@ function inscription() {
     "motDePasseIns",
     document.querySelector("#motDePasseIns").value
   );
+}
+
+function deconnexion() {
+  window.location.href = "index.html";
 }
